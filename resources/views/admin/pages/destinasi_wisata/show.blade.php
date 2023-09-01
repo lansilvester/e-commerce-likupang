@@ -1,22 +1,18 @@
-@extends('layouts.app')
-
+@extends('admin.base')
 @section('content')
-<br><br>
 <div class="container">
     <div class="blog-details">
-        <div class="gallary-header text-center">
-            <h2>
-                <i class="fa fa-plane" style="color:#007ca1;font-size: 2em; margin-bottom: .5em;"></i><br>
+        <div class="gallary-header py-3 fw-bolder">
+            <h1>
                 Destinasi Wisata
-            </h2>
+            </h1>
             <p>
                 Mulai liburan anda dengan melihat objek wisata di likupang
             </p>
-            <hr class="line-blue" />
         </div><!--/.gallery-header-->
         <div class="blog-content">
             
-                <a href="{{ route('destinasi_wisata.index') }}" class="btn btn-info" style="font-size:1.3em"><i class="fa fa-arrow-left"></i> Lihat Semua Destinasi</a>
+                <a href="{{ route('dashboard_destinasi_wisata.index') }}" class="btn btn-info"><i data-feather="arrow-left"></i> Lihat Semua Destinasi</a>
             <br><br>
             <style>
                 .fw-bold{
@@ -31,9 +27,9 @@
                         <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
                     </div><!--/.thumbnail-img-->
                     <br>
-                @auth   
+                @auth
                     @if (Auth::user()->role = 'SA' || Auth::user()->role = 'admin_destinasi')
-                    <a class="btn btn-warning" href="{{ route('dashboard_destinasi_wisata.edit', $destinasi->id) }}"><i class="fa fa-pencil"></i> Edit</a>
+                    <a class="btn btn-warning btn-lg w-100" href="{{ route('dashboard_destinasi_wisata.edit', $destinasi->id) }}"><i class="align-middle" data-feather="edit"></i> Edit</a>
                     @endif
                 @endauth
 

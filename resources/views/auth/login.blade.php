@@ -1,13 +1,18 @@
-@extends('layouts.app')
-
-@section('content')
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class=" d-flex justify-content-center align-items-center">
+    
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <a href="/" class="btn btn-outline-secondary mb-2"><i class="bi bi-house"></i> Kembali</a>
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
+                
                 <div class="card-body">
+                    <div class="login mb-5" style="font-size:5em; text-align:center"><i class="bi bi-person-add"></i></div>
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -70,4 +75,6 @@
         </div>
     </div>
 </div>
-@endsection
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

@@ -24,7 +24,8 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="single-package-item">
                         <div class="thumbnail-img">
-                            <img src="{{ $destinasi->foto }}" alt="blog-img">
+                            <img src="{{ asset('storage/destinasi_wisata/'.$destinasi->foto) }}" alt="blog-img" style="width: 100%">
+                            
                             <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
                         </div><!--/.thumbnail-img-->
                         <div class="single-package-item-txt" style="margin-top:20px;">

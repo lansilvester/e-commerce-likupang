@@ -25,8 +25,8 @@
                                 <li><a href="{{ route('souvenir.index') }}">Sovenir </a></li>
                                 <li><a href="{{ route('homestay.index') }}">Homestay</a></li>
                                 <li>
-                                    <!-- <button class="book-btn">book now
-                                    </button> -->
+                                    <a href="{{ route('login') }}" class="book-btn" style="background:#00e0f0; color:white">Sign in <i class="fa fa-sign-in"></i>
+                                    </a>
                                 </li><!--/.project-btn--> 
                             </ul>
                         </div><!-- /.navbar-collapse -->
