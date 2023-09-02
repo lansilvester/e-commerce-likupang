@@ -6,7 +6,7 @@
 		<!--3 BOXES end-->
 
         {{-- 3 Services --}}
-        @include('layouts.partials.services')
+        {{-- @include('layouts.partials.services') --}}
         
 		<!-- OBJEK WISATA start-->
 		<section id="destination" class="gallery">

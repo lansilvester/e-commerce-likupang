@@ -24,7 +24,7 @@ class DashboardController extends Controller
     {
         $feedback = Feedback::findOrFail($id);
         $feedback->delete();
-        return redirect()->route('dashboard')->with('success', 'Feedback telah dihapus');
+        return redirect()->route('dashboard')->with('success_delete_feedback', 'Feedback telah dihapus');
     }
 
 }

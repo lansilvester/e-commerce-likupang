@@ -93,18 +93,29 @@
             </div>
         </div>
 
+        {{-- Data Users --}}
+        @if(Auth::user()->role == 'SA')
         <div class="row">
             <div class="col-12 col-lg-12 col-xxl-12 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header">
-                        @if (Session::has('succes'))
-                        <div class="alert alert-success">Berhasil Dihapus</div>
-                        @endif
                         <div class="d-flex justify-content-between">
 
                             <h5 class="card-title mb-0">Daftar Users</h5>
-                            <a href="{{ route() }}" class="btn btn-success"><i data-feather="plus"></i> Tambah User</a>
+                            <a href="{{ route('users.create') }}" class="btn btn-success"><i data-feather="plus"></i> Tambah User</a>
                         </div>
+                        @if (Session::has('success_delete_user'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong style="color:#01aa72">User telah dihapus!</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                        @endif
+                        @if (Session::has('success_create_user'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong style="color:#01aa72">Berhasil create user</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                        @endif
                     </div>
                     <table class="table table-hover my-0">
                         <thead>
@@ -118,7 +129,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($data_users as $i => $user)
+                            @forelse ($data_users as $i => $user)
                             <tr>
                                 <td>{{ $i+1; }}</td>
                                 <td>{{ $user->name }}</td>
@@ -133,17 +144,26 @@
                                 <td>
                                     @if ($user->role == 'SA')
                                     <span class="badge badge-success bg-success">Super Admin</span>
+                                    @else
+                                    <span class="badge badge-info bg-info">{{ $user->role }}</span>
                                     @endif
                                 </td>
                                 <td>
                                     @if(Auth::user()->id !== $user->id)
-                                    <a href="" class="btn btn-info"><i data-feather="eye"></i></a>
-                                    <a href="" class="btn btn-warning"><i data-feather="edit"></i></a>
-                                    <a href="" class="btn btn-danger"><i data-feather="trash"></i></a>
+                                    <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><i data-feather="edit"></i></a>
+                                    <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i data-feather="trash"></i></button>
+                                    </form>
                                     @endif
                                 </td>
                             </tr>
-                            @endforeach
+                            @empty
+                            <tr>
+                                <td colspan="6" class="text-warning">User kosong</td>
+                            </tr>
+                            @endforelse
                         </tbody>
                         <tfoot>
                         </tfoot>
@@ -151,14 +171,14 @@
                 </div>
             </div>
         </div>
-
+        @endif
         
-
+        @if(Auth::user()->role== 'SA')
         <div class="row">
             <div class="col-6 col-lg-6 col-xxl-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header">
-                        @if (Session::has('succes'))
+                        @if (Session::has('success_delete_feedback'))
                             <div class="alert alert-success">Berhasil Dihapus</div>
                         @endif
                         <h5 class="card-title mb-0">Feedback</h5>
@@ -172,7 +192,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($data_feedback as $i => $data)
+                            @forelse ($data_feedback as $i => $data)
                             <tr>
                                 <td>{{ $i+1; }}</td>
                                 <td>{{ $data->pesan }}</td>
@@ -184,7 +204,11 @@
                                     </form>
                                 </td>
                             </tr>
-                            @endforeach
+                            @empty
+                            <tr>
+                                <td colspan="3" class="text-center text-warning">Feedback kosong</td>
+                            </tr>
+                            @endforelse
                         </tbody>
                         <tfoot>
                         </tfoot>
@@ -192,7 +216,7 @@
                 </div>
             </div>
         </div>
-
+        @endif
         
         <div class="row">
             <div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">

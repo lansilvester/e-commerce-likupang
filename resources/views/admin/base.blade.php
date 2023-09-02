@@ -33,30 +33,34 @@
 				</a>
 		
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">
-						<!-- Tambahkan judul atau header sidebar di sini -->
-					</li>
-		
 					<li class="sidebar-item {{ request()->is('dashboard') ? 'active' : '' }}">
 						<a class="sidebar-link" href="{{ route('dashboard') }}">
 							<i class="align-middle" data-feather="layout"></i> <span class="align-middle">Dashboard</span>
 						</a>
 					</li>
+					
+				@can('access-destinasi-wisata')
 					<li class="sidebar-item {{ request()->is('dashboard_destinasi_wisata*') ? 'active' : '' }}">
 						<a class="sidebar-link" href="{{ route('dashboard_destinasi_wisata.index') }}">
 							<i class="align-middle" data-feather="map"></i> <span class="align-middle">Destinasi Wisata</span>
 						</a>
 					</li>
+				@endcan
+				
+				@can('access-souvenir')
 					<li class="sidebar-item {{ request()->is('dashboard_souvenir*') ? 'active' : '' }}">
 						<a class="sidebar-link" href="{{ route('dashboard_souvenir.index') }}">
 							<i class="align-middle" data-feather="gift"></i> <span class="align-middle">Sovenir</span>
 						</a>
 					</li>
+				@endcan
+				@can('access-homestay')
 					<li class="sidebar-item {{ request()->is('dashboard_homestay*') ? 'active' : '' }}">
 						<a class="sidebar-link" href="{{ route('dashboard_homestay.index') }}">
 							<i class="align-middle" data-feather="home"></i> <span class="align-middle">Homestay</span>
 						</a>
 					</li>
+				@endcan
 				</ul>
 			</div>
 		</nav>		
@@ -77,13 +81,11 @@
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
 								data-bs-toggle="dropdown">
-								<img src="{{ asset('admin/img/avatars/avatar.jpg') }}" class="avatar img-fluid rounded me-1"
+								{{ Auth::user()->email }}
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1200px-User-avatar.svg.png" class="avatar img-fluid rounded me-1"
 									alt="profile picture" /> <span class="text-dark"></span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-end">
-								<a class="dropdown-item" href="pages-profile.html">
-									<i class="align-middle me-1" data-feather="user"></i> Profile
-								</a>
 							<a class="dropdown-item" href="{{ route('logout') }}"
 								onclick="event.preventDefault();
 								document.getElementById('logout-form').submit();">
