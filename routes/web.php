@@ -22,9 +22,11 @@ Route::resource('souvenir', SouvenirController::class);
 Route::resource('destinasi_wisata', DestinasiWisataController::class);
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::delete('feedback/{id}', [DashboardController::class, 'destroy'])->name('feedback.destroy');
 Route::resource('dashboard_destinasi_wisata', DestinasiWisataAdminController::class);
 Route::resource('dashboard_souvenir', SouvenirAdminController::class);
 Route::resource('dashboard_homestay', HomestayAdminController::class);
 
 Route::get('search/destinasi_wisata',[SearchAdminController::class, 'destinasi_wisata'])->name('search_destinasi_wisata');
-Route::get('search/souvenir',[SearchAdminController::class, 'souvenir'])->name('search_souvenir');
+Route::get('search/souvenir',[SearchAdminController::class, 'sovenir'])->name('search_souvenir');
+Route::get('search/homestay',[SearchAdminController::class, 'homestay'])->name('search_homestay');

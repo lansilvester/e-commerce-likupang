@@ -24,10 +24,18 @@
                                 <li><a href="{{ route('destinasi_wisata.index') }}">Objek Wisata</a></li>
                                 <li><a href="{{ route('souvenir.index') }}">Sovenir </a></li>
                                 <li><a href="{{ route('homestay.index') }}">Homestay</a></li>
+                                @auth       
                                 <li>
-                                    <a href="{{ route('login') }}" class="book-btn" style="background:#00e0f0; color:white">Sign in <i class="fa fa-sign-in"></i>
+                                    <a href="{{ route('dashboard') }}" target="__blank" class="book-btn" style="background:#00e0f0; color:white">dashboard <i class="fa fa-sign-in"></i>
                                     </a>
                                 </li><!--/.project-btn--> 
+                                @endauth
+                                @guest
+                                <li>
+                                    <a href="{{ route('login') }}" target="__blank" class="book-btn" style="background:#00e0f0; color:white">Sign in <i class="fa fa-sign-in"></i>
+                                    </a>
+                                </li><!--/.project-btn--> 
+                                @endguest
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.main-menu-->

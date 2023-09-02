@@ -27,13 +27,14 @@
             <div class="row">
                 <div class="col-md-4 col-xl-4">
                     <div class="thumbnail-img">
+                        
                         <img src="{{ asset('storage/destinasi_wisata/' . $destinasi->foto) }}" alt="Gambar Destinasi Wisata" width="100%">
                         <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
                     </div><!--/.thumbnail-img-->
                     <br>
                 @auth   
                     @if (Auth::user()->role = 'SA' || Auth::user()->role = 'admin_destinasi')
-                    <a class="btn btn-warning" href="{{ route('dashboard_destinasi_wisata.edit', $destinasi->id) }}"><i class="fa fa-pencil"></i> Edit</a>
+                    <a class="btn btn-warning" href="{{ route('dashboard_destinasi_wisata.edit', $destinasi->id) }}" target="__blank"><i class="fa fa-pencil"></i> Edit</a>
                     @endif
                 @endauth
 

@@ -1,22 +1,18 @@
-@extends('layouts.app')
-
+@extends('admin.base')
 @section('content')
-<br><br>
 <div class="container">
     <div class="blog-details">
-        <div class="gallary-header text-center">
-            <h2>
-                <i class="fa fa-building" style="color:#007ca1;font-size: 2em; margin-bottom: .5em;"></i><br>
+        <div class="gallary-header py-3 fw-bolder">
+            <h1>
                 Homestay
-            </h2>
+            </h1>
             <p>
-                Temukan homestay favorit anda
+                Temukan tempat menginap yang nyaman di Likupang
             </p>
-            <hr class="line-blue" />
         </div><!--/.gallery-header-->
         <div class="blog-content">
             
-                <a href="{{ route('homestay.index') }}" class="btn btn-info" style="font-size:1.3em"><i class="fa fa-arrow-left"></i> Lihat Semua Homestay</a>
+                <a href="{{ route('dashboard_homestay.index') }}" class="btn btn-info"><i data-feather="arrow-left"></i> Lihat Semua Homestay</a>
             <br><br>
             <style>
                 .fw-bold{
@@ -27,13 +23,13 @@
             <div class="row">
                 <div class="col-md-4 col-xl-4">
                     <div class="thumbnail-img">
-                        <img src="{{ asset('storage/homestay/'.$homestay->foto) }}" alt="blog-img">
+                        <img src="{{ asset('storage/homestay/' . $homestay->foto) }}" alt="Gambar Homestay" width="100%">
                         <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
                     </div><!--/.thumbnail-img-->
                     <br>
                 @auth
                     @if (Auth::user()->role = 'SA' || Auth::user()->role = 'admin_homestay')
-                    <a class="btn btn-warning" href="{{ route('dashboard_homestay.edit', $homestay->id) }}" target="__blank"><i class="fa fa-pencil"></i> Edit</a>
+                    <a class="btn btn-warning btn-lg w-100" href="{{ route('dashboard_homestay.edit', $homestay->id) }}"><i class="align-middle" data-feather="edit"></i> Edit</a>
                     @endif
                 @endauth
 
@@ -54,7 +50,7 @@
                                     <td><h5 class="fw-bold">Alamat</h5>{{ $homestay->alamat }}</td>
                                 </tr>
                                 <tr>
-                                    <td><h5 class="fw-bold">Harga</h5>{{ $homestay->harga }}</td>
+                                    <td><h5 class="fw-bold">Harga</h5>Rp. {{ $homestay->harga }}</td>
                                 </tr>
                                 <tr>
                                     <td><h5 class="fw-bold">Kontak</h5>{{ $homestay->kontak }}</td>

@@ -7,7 +7,6 @@
                 <div class="col-xs-12 col-sm-12 col-xl-6 col-md-6">
                     <div class="filtr-item">
                         <img src="{{ asset('storage/destinasi_wisata/' . $destinasi->foto) }}" alt="Gambar Destinasi Wisata">
-
                         <div class="item-title">
                             <a href="{{ route('destinasi_wisata.show', $destinasi->id) }}">
                             {{ $destinasi->nama_destinasi }}

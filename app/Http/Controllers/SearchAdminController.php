@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Destinasi_Wisata;
+use App\Models\Homestay;
 use App\Models\Souvenir;
 
 class SearchAdminController extends Controller
@@ -28,6 +29,17 @@ class SearchAdminController extends Controller
 
         $results = Souvenir::where('nama_souvenir', 'like', '%' . $searchTerm . '%')->paginate(10);
 
-        return view('admin.pages.souvenir.search', compact('results', 'searchTerm'));
+        return view('admin.pages.sovenir.search', compact('results', 'searchTerm'));
+    }
+    public function homestay(Request $request){
+        
+        $request->validate([
+            'search' => 'string|max:255',
+        ]);
+        $searchTerm = $request->input('search');
+
+        $results = Homestay::where('nama_souvenir', 'like', '%' . $searchTerm . '%')->paginate(10);
+
+        return view('admin.pages.homestay.search', compact('results', 'searchTerm'));
     }
 }
