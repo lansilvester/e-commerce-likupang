@@ -54,7 +54,7 @@
                                     <td><h5 class="fw-bold">Alamat</h5>{{ $destinasi->alamat }}</td>
                                 </tr>
                                 <tr>
-                                    <td><h5 class="fw-bold">Harga</h5>Rp. {{ $destinasi->harga_masuk }}</td>
+                                    <td><h5 class="fw-bold">Harga Masuk</h5>Rp. {{ $destinasi->harga_masuk }}</td>
                                 </tr>
                                 <tr>
                                     <td><h5 class="fw-bold">Kontak</h5>{{ $destinasi->kontak }}</td>

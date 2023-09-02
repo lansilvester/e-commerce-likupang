@@ -27,3 +27,4 @@ Route::resource('dashboard_souvenir', SouvenirAdminController::class);
 Route::resource('dashboard_homestay', HomestayAdminController::class);
 
 Route::get('search/destinasi_wisata',[SearchAdminController::class, 'destinasi_wisata'])->name('search_destinasi_wisata');
+Route::get('search/souvenir',[SearchAdminController::class, 'souvenir'])->name('search_souvenir');
