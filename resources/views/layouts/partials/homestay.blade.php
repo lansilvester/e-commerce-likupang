@@ -25,7 +25,7 @@
         </div>
         <!--/.homestay items-->
         @empty
-            
+        <div class="alert alert-info">Data Tidak Ada</div>
         @endforelse
 </div><!--/.row-->
 </div><!--/.blog-content-->

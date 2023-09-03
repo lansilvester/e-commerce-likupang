@@ -17,7 +17,7 @@ class CreateHomestayTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_homestay');
             $table->string('alamat')->nullable();
-            $table->string('map')->nullable();
+            $table->text('map')->nullable();
             $table->integer('harga')->nullable();
             $table->string('kontak')->nullable();
             $table->text('deskripsi')->nullable();

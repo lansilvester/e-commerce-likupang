@@ -44,8 +44,6 @@
                                     <th>#</th>
                                     <th>Nama Souvenir</th>
                                     <th>Alamat</th>
-                                    <th>Harga</th>
-                                    <th>Kontak</th>
                                     <th>Deskripsi</th>
                                     <th>Foto</th>
                                     <th>Aksi</th>
@@ -57,8 +55,6 @@
                                     <td>{{ $i + 1 }}</td>
                                     <td>{{ $data->nama_souvenir }}</td>
                                     <td>{{ $data->alamat }}</td>
-                                    <td>Rp.{{ $data->harga }}</td>
-                                    <td>{{ $data->kontak }}</td>
                                     <td>{{ $data->deskripsi }}</td>
                                     <td>
                                         <img src="{{ asset('storage/souvenir/' . $data->foto) }}" alt="Gambar Souvenir" width="150px">

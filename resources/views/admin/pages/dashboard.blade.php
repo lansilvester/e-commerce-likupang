@@ -62,7 +62,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h1 class="mt-1 mb-3">{{ $data_destinasi_wisata->count() }}</h1>
+                                    <h1 class="mt-1 mb-3">{{ $data_souvenir->count() }}</h1>
                                     
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h1 class="mt-1 mb-3">{{ $data_destinasi_wisata->count() }}</h1>
+                                    <h1 class="mt-1 mb-3">{{ $data_homestay->count() }}</h1>
                                     
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                     <div class="card-header">
                         <div class="d-flex justify-content-between">
 
-                            <h5 class="card-title mb-0">Daftar Users</h5>
+                            <h5 class="card-title mb-0"><i data-feather="users"></i> Daftar Users</h5>
                             <a href="{{ route('users.create') }}" class="btn btn-success"><i data-feather="plus"></i> Tambah User</a>
                         </div>
                         @if (Session::has('success_delete_user'))
@@ -181,13 +181,13 @@
                         @if (Session::has('success_delete_feedback'))
                             <div class="alert alert-success">Berhasil Dihapus</div>
                         @endif
-                        <h5 class="card-title mb-0">Feedback</h5>
+                        <h5 class="card-title mb-0"><i data-feather="message-square"></i> Feedback</h5>
                     </div>
                     <table class="table table-hover my-0">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
+                                <th>Pesan</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -223,7 +223,7 @@
                 <div class="card flex-fill">
                     <div class="card-header">
 
-                        <h5 class="card-title mb-0">Calendar</h5>
+                        <h5 class="card-title mb-0"><i data-feather="calendar"></i> Calendar</h5>
                     </div>
                     <div class="card-body d-flex">
                         <div class="align-self-center w-100">

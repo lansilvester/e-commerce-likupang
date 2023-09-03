@@ -17,7 +17,7 @@ class CreateDestinasiWisataTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_destinasi');
             $table->string('alamat')->nullable();
-            $table->string('map')->nullable();
+            $table->text('map')->nullable();
             $table->integer('harga_masuk')->nullable();
             $table->text('deskripsi')->nullable();
             $table->string('foto')->nullable();
