@@ -10,6 +10,7 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\HomestayAdminController;
 use App\Http\Controllers\HomestayController;
 use App\Http\Controllers\SearchAdminController;
+use App\Http\Controllers\SosmedController;
 use App\Http\Controllers\SouvenirAdminController;
 use App\Http\Controllers\SouvenirController;
 use App\Http\Controllers\UserController;
@@ -26,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('dashboard_destinasi_wisata', DestinasiWisataAdminController::class)->middleware('role:SA,admin_objek_wisata');
     Route::resource('dashboard_souvenir', SouvenirAdminController::class)->middleware('role:SA,admin_souvenir');
     Route::resource('dashboard_homestay', HomestayAdminController::class)->middleware('role:SA,admin_homestay');
+    Route::resource('dashboard_sosmed', SosmedController::class)->middleware('role:SA');
 
     Route::resource('users', UserController::class)->middleware('role:SA');
     Route::post('/feedback', [FeedbackController::class, 'create'])->name('feedback');
