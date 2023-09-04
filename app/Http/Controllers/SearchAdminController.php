@@ -38,7 +38,7 @@ class SearchAdminController extends Controller
         ]);
         $searchTerm = $request->input('search');
 
-        $results = Homestay::where('nama_souvenir', 'like', '%' . $searchTerm . '%')->paginate(10);
+        $results = Homestay::where('nama_homestay', 'like', '%' . $searchTerm . '%')->paginate(10);
 
         return view('admin.pages.homestay.search', compact('results', 'searchTerm'));
     }

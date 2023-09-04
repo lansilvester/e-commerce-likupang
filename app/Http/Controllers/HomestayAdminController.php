@@ -16,7 +16,7 @@ class HomestayAdminController extends Controller
 
     public function create()
     {
-        return view('admin.pages.homestay.create'); // Sesuaikan dengan view Homestay
+        return view('admin.pages.homestay.create');
     }
 
     public function store(Request $request)
@@ -26,7 +26,7 @@ class HomestayAdminController extends Controller
             'alamat' => 'string|max:255',
             'harga' => 'string',
             'kontak' => 'string|max:15',
-            'deskripsi' => 'string|max:1000',
+            'deskripsi' => 'string',
             'foto' => 'image|max:5024',
             'map' => 'string',
         ]);
@@ -37,6 +37,7 @@ class HomestayAdminController extends Controller
             'harga',
             'kontak',
             'deskripsi',
+            'foto',
             'map'
         ]);
 
@@ -54,13 +55,13 @@ class HomestayAdminController extends Controller
     public function show($id)
     {
         $homestay = Homestay::findOrFail($id);
-        return view('admin.pages.homestay.show', compact('homestay')); // Sesuaikan dengan view Homestay
+        return view('admin.pages.homestay.show', compact('homestay'));
     }
 
     public function edit($id)
     {
         $homestay = Homestay::findOrFail($id);
-        return view('admin.pages.homestay.edit', compact('homestay')); // Sesuaikan dengan view Homestay
+        return view('admin.pages.homestay.edit', compact('homestay'));
     }
 
     public function update(Request $request, $id)

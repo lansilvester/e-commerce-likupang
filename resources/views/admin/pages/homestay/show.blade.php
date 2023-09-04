@@ -9,7 +9,7 @@
             <p>
                 Temukan tempat menginap yang nyaman di Likupang
             </p>
-        </div><!--/.gallery-header-->
+        </div>
         <div class="blog-content">
             
                 <a href="{{ route('dashboard_homestay.index') }}" class="btn btn-info"><i data-feather="arrow-left"></i> Lihat Semua Homestay</a>
@@ -24,8 +24,8 @@
                 <div class="col-md-4 col-xl-4">
                     <div class="thumbnail-img">
                         <img src="{{ asset('storage/homestay/' . $homestay->foto) }}" alt="Gambar Homestay" width="100%">
-                        <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-                    </div><!--/.thumbnail-img-->
+                        <div class="thumbnail-img-overlay"></div>
+                    </div>
                     <br>
                 @auth
                     @if (Auth::user()->role = 'SA' || Auth::user()->role = 'admin_homestay')
