@@ -51,7 +51,7 @@
                             <td><h5 class="fw-bold">Alamat</h5>{{ $souvenir->alamat }}</td>
                         </tr>
                         <tr>
-                            <td><h5 class="fw-bold">Harga</h5>{{ $souvenir->harga }}</td>
+                            <td><h5 class="fw-bold">Harga</h5>@currency($souvenir->harga)</td>
                         </tr>
                         <tr>
                             <td><h5 class="fw-bold">Kontak</h5>{{ $souvenir->kontak }}</td>
