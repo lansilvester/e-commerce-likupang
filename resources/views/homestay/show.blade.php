@@ -51,6 +51,9 @@
                                     <td><h5 class="fw-bold">Deskripsi</h5>{{ $homestay->deskripsi }}</td>
                                 </tr>
                                 <tr>
+                                    <td><h5 class="fw-bold">Desa</h5>{{ $homestay->desa }}</td>
+                                </tr>
+                                <tr>
                                     <td><h5 class="fw-bold">Alamat</h5>{{ $homestay->alamat }}</td>
                                 </tr>
                                 <tr>

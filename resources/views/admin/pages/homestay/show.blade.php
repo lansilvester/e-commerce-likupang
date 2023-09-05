@@ -56,6 +56,9 @@
                                     <td><h5 class="fw-bold">Kontak</h5>{{ $homestay->kontak }}</td>
                                 </tr>
                                 <tr>
+                                    <td><h5 class="fw-bold">Desa</h5>{{ $homestay->desa }}</td>
+                                </tr>
+                                <tr>
                                     <td><h5 class="fw-bold">Map</h5>
                                         <a href="{{ $homestay->map }}" target="_blank">
                                         

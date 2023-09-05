@@ -29,6 +29,8 @@ class HomestayAdminController extends Controller
             'deskripsi' => 'string',
             'foto' => 'image|max:5024',
             'map' => 'string',
+            'desa' => 'required|in:Desa Marinsow,Desa Pulisan,Desa Kinunang',
+
         ]);
 
         $data = $request->only([
@@ -38,7 +40,8 @@ class HomestayAdminController extends Controller
             'kontak',
             'deskripsi',
             'foto',
-            'map'
+            'map',
+            'desa'
         ]);
 
         if ($request->hasFile('foto')) {
@@ -74,6 +77,7 @@ class HomestayAdminController extends Controller
             'deskripsi' => 'required|max:1000',
             'map' => 'string',
             'foto' => 'image|max:5024',
+            'desa' => 'required|in:Desa Marinsow,Desa Pulisan,Desa Kinunang',
         ]);
 
         $homestay = Homestay::findOrFail($id);
@@ -83,7 +87,9 @@ class HomestayAdminController extends Controller
             'harga',
             'kontak',
             'deskripsi',
-            'map'
+            'map',
+            'foto',
+            'desa'
         ]);
 
         if ($request->hasFile('foto')) {

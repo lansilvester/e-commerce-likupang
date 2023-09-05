@@ -54,6 +54,18 @@
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="form-group mb-4">
+                                <label for="desa" class="card-title">Desa</label>
+                                <select class="form-select @error('desa') is-invalid @enderror" id="desa" name="desa">
+                                    <option value="Desa Marinsow">Desa Marinsow</option>
+                                    <option value="Desa Pulisan">Desa Pulisan</option>
+                                    <option value="Desa Kinunang">Desa Kinunang</option>
+                                </select>
+                                @error('desa')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            
                             <div class="form-group mb-5">
                                 <label for="foto" class="card-title">Foto</label><br>
                                 <input type="file" id="foto" name="foto" class="form-control @error('foto') is-invalid @enderror">

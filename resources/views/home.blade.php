@@ -68,12 +68,6 @@
 						<hr class="line-blue" />
 					</div><!--/.gallery-header-->
 					@include('layouts.partials.homestay')
-                    <div class="about-btn">
-                        <a href="{{ route('homestay.index') }}" class="about-view packages-btn" style="background:#00abab; border-color:#4c97ad; width:300px; margin:0 auto;">
-                            Lihat Semua &nbsp;<i class="fa fa-arrow-right"></i> 
-                        </a>
-                    </div><!--/.about-btn-->
-                
                 </div><!--/.blog-details-->
             </div><!--/.container-->
         </section>

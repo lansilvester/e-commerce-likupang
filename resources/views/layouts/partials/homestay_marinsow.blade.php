@@ -19,7 +19,7 @@
             <br><br>
             <div class="row">
 
-                @forelse ($data_homestay as $homestay)           
+                @forelse ($desa_marinsow as $homestay)           
                 <!-- Hoemstay items -->
                 <div class="col-md-4 col-sm-6">
                     <div class="single-package-item">
@@ -29,7 +29,6 @@
                         </div><!--/.thumbnail-img-->
                         <div class="single-package-item-txt" style="margin-top:20px;">
                             <h1 style="font-size:21px; line-height:1.3em; font-weight:bold; color:#005353; ">{{ $homestay->nama_homestay }}</h1>
-                            <span class="badge " style="background:#00a59d">{{ $homestay->desa }}</span>
                             <div class="packages-para">
                                 <p>{{ $homestay->deskripsi }}</p>
                             </div><!--/.packages-para-->
