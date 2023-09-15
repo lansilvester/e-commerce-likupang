@@ -28,8 +28,11 @@
                             </div>
                             <div class="form-group mb-4">
                                 <label for="map" class="card-title">Map</label><br>
-                                <!-- Your Map Embed Code Here -->
-                                <input type="text" class="form-control @error('map') is-invalid @enderror" id="map" placeholder="<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666059225827!2d106.82274531431713!3d-6.175392995526864!4m5!3m4!1s0x2e69f3e30de176b7:0x299c536b29f81720!8m2!3d-6.1751108!4d106.8270802' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy'></iframe>" name="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19108.295215177866!2d125.04425246420476!3d1.6695075932593564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287b096aa0e487d%3A0xccd43f4353226126!2sLikupang%2C%20Likupang%20II%2C%20Kec.%20Likupang%20Tim.%2C%20Kabupaten%20Minahasa%20Utara%2C%20Sulawesi%20Utara!5e0!3m2!1sid!2sid!4v1694784126628!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                               
+                               <small class="mb-3"><a href="https://www.google.com/maps/@1.6712179,125.0605337,15z?hl=id&entry=ttu" target="_blank"><b>Open map</b></a>>Bagikan>Sematkan Peta>Salin HTML>Paste dibawah</small> 
+
+                                <input type="text" class="form-control @error('map') is-invalid @enderror" id="map" placeholder="<iframe src='https://www.google.com/maps/embed....." name="map">
                                 @error('map')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror

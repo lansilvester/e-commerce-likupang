@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Homestay; // Ubah model menjadi Homestay
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class HomestayAdminController extends Controller
@@ -29,6 +30,7 @@ class HomestayAdminController extends Controller
             'deskripsi' => 'string',
             'foto' => 'image|max:5024',
             'map' => 'string',
+            'user_id' => 'required'
         ]);
 
         $data = $request->only([
@@ -38,9 +40,10 @@ class HomestayAdminController extends Controller
             'kontak',
             'deskripsi',
             'foto',
-            'map'
+            'map',
+            'user_id'
         ]);
-
+        $data['user_id'] = Auth::user()->id;
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
             $filename = time() . '.' . $file->getClientOriginalExtension();

@@ -1,14 +1,18 @@
-@extends('layouts.app')
-
-@section('content')
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class=" d-flex justify-content-center align-items-center">
+    
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <a href="/" class="btn btn-outline-secondary mb-2"><i class="bi bi-house"></i> Kembali</a>
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <div class="login mb-5" style="font-size:5em; text-align:center"><i class="bi bi-person-add"></i></div>
+
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row mb-3">
@@ -60,15 +64,23 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
                         <div class="row mb-3">
-                            <label for="role" class="col-md-4 col-form-label text-md-end">Mendaftar Sebagai</label>
+                            <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
+
                             <div class="col-md-6">
                                 <select id="role" class="form-control" name="role" required>
-                                    <option value="user">User</option>
                                     <option value="admin_homestay">Admin Homestay</option>
-                                    <option value="admin_souvenir">Admin Souvenir</option>
-                                    <option value="admin_objek_wisata">Admin Objek Wisata</option>
+                                    <option value="admin_kuliner">Admin Kuliner</option>
+                                    <option value="admin_objek_wisata">Admin Destinasi Wisata</option>
+                                    <option value="admin_sovenir">Admin Sovenir</option>
                                 </select>
+
+                                @error('role')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
 
@@ -77,6 +89,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                <p>Sudah punya akun? Silahkan <a href="{{ route('login') }}">Login sekarang</a></p>
                             </div>
                         </div>
                     </form>
@@ -85,4 +98,4 @@
         </div>
     </div>
 </div>
-@endsection
+</body>

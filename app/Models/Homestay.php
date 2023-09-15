@@ -10,4 +10,9 @@ class Homestay extends Model
     use HasFactory;
     protected $table = 'homestay';
     protected $guarded = ['id'];
+    public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
 }

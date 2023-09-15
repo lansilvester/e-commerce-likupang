@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Destinasi_Wisata;
 use App\Models\Homestay;
+use App\Models\Kuliner;
 use App\Models\Souvenir;
 
 class SearchAdminController extends Controller
@@ -41,5 +42,16 @@ class SearchAdminController extends Controller
         $results = Homestay::where('nama_homestay', 'like', '%' . $searchTerm . '%')->paginate(10);
 
         return view('admin.pages.homestay.search', compact('results', 'searchTerm'));
+    }
+    public function kuliner(Request $request){
+        
+        $request->validate([
+            'search' => 'string|max:255',
+        ]);
+        $searchTerm = $request->input('search');
+
+        $results = Kuliner::where('NamaKuliner', 'like', '%' . $searchTerm . '%')->paginate(10);
+
+        return view('admin.pages.kuliner.search', compact('results', 'searchTerm'));
     }
 }

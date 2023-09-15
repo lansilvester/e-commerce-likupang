@@ -57,8 +57,12 @@
                                 <tr>
                                     <td><h5 class="fw-bold">Harga Masuk</h5>Rp. {{ $destinasi->harga_masuk }}</td>
                                 </tr>
+                                
                                 <tr>
-                                    <td><h5 class="fw-bold">Kontak</h5>{{ $destinasi->kontak }}</td>
+                                    <td><h5 class="fw-bold">Dibuat Oleh</h5>{{ $destinasi->user->name }}</td>
+                                </tr>
+                                <tr>
+                                    <td><h5 class="fw-bold">Dibuat pada</h5>{{ $destinasi->created_at->format('D, d-M-Y') }}</td>
                                 </tr>
                                 <tr>
                                     <td><h5 class="fw-bold">Map</h5>{!! $destinasi->map !!}</td>

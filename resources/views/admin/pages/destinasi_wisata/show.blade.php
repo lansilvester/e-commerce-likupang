@@ -44,6 +44,17 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>
+                                        <h5 class="fw-bold">Dibuat Oleh</h5>
+                                        <span class="badge badge-success bg-success">{{ $destinasi->user->name }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5 class="fw-bold">Tanggal</h5>{{ $destinasi->created_at->format('D, d-M-Y') }}
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td><h5 class="fw-bold">Deskripsi</h5>{{ $destinasi->deskripsi }}</td>
                                 </tr>
                                 <tr>
@@ -53,10 +64,9 @@
                                     <td><h5 class="fw-bold">Harga Masuk</h5>Rp. {{ $destinasi->harga_masuk }}</td>
                                 </tr>
                                 <tr>
-                                    <td><h5 class="fw-bold">Kontak</h5>{{ $destinasi->kontak }}</td>
-                                </tr>
-                                <tr>
-                                    <td><h5 class="fw-bold">Map</h5>{!! $destinasi->map !!}</td>
+                                    <td><h5 class="fw-bold">Map</h5>
+                                        {!! $destinasi->map !!}<br>
+                                    </td>
                                 </tr>
                             </td>
                         </tr>

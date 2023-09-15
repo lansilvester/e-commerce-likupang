@@ -29,16 +29,18 @@
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="{{ route('dashboard') }}">
-					<span class="align-middle">E-Commerce</span>
+					<span class="">Marketplace Likupang</span>
 				</a>
 		
 				<ul class="sidebar-nav">
+				
+				@if(auth()->user()->role == 'SA')
 					<li class="sidebar-item {{ request()->is('dashboard') ? 'active' : '' }}">
 						<a class="sidebar-link" href="{{ route('dashboard') }}">
 							<i class="align-middle" data-feather="layout"></i> <span class="align-middle">Dashboard</span>
 						</a>
 					</li>
-					
+				@endif
 				@can('access-destinasi-wisata')
 					<li class="sidebar-item {{ request()->is('dashboard_destinasi_wisata*') ? 'active' : '' }}">
 						<a class="sidebar-link" href="{{ route('dashboard_destinasi_wisata.index') }}">
@@ -58,6 +60,13 @@
 					<li class="sidebar-item {{ request()->is('dashboard_homestay*') ? 'active' : '' }}">
 						<a class="sidebar-link" href="{{ route('dashboard_homestay.index') }}">
 							<i class="align-middle" data-feather="home"></i> <span class="align-middle">Homestay</span>
+						</a>
+					</li>
+				@endcan
+				@can('access-kuliner')
+					<li class="sidebar-item {{ request()->is('dashboard_kuliner*') ? 'active' : '' }}">
+						<a class="sidebar-link" href="{{ route('dashboard_kuliner.index') }}">
+							<i class="align-middle" data-feather="shopping-bag"></i> <span class="align-middle">Kuliner</span>
 						</a>
 					</li>
 				@endcan

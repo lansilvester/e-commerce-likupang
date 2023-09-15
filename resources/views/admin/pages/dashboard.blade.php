@@ -87,6 +87,25 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-3 col-xl-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col mt-0">
+                                            <h5 class="card-title">kuliner</h5>
+                                        </div>
+
+                                        <div class="col-auto">
+                                            <div class="stat text-primary">
+                                                <i class="align-middle" data-feather="shopping-bag"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h1 class="mt-1 mb-3">{{ $data_kuliner->count() }}</h1>
+                                    
+                                </div>
+                            </div>
+                        </div>
     
                     </div>
                 </div>
@@ -173,7 +192,7 @@
         </div>
         @endif
         
-        @if(Auth::user()->role== 'SA')
+        @if(Auth::user()->role== 'ss')
         <div class="row">
             <div class="col-6 col-lg-6 col-xxl-6 d-flex">
                 <div class="card flex-fill">
@@ -218,24 +237,6 @@
         </div>
         @endif
         
-        <div class="row">
-            <div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
-                <div class="card flex-fill">
-                    <div class="card-header">
-
-                        <h5 class="card-title mb-0"><i data-feather="calendar"></i> Calendar</h5>
-                    </div>
-                    <div class="card-body d-flex">
-                        <div class="align-self-center w-100">
-                            <div class="chart">
-                                <div id="datetimepicker-dashboard"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </main>
 @endsection

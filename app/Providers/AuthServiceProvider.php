@@ -27,5 +27,8 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('access-destinasi-wisata', function ($user) {
             return $user->role === 'SA' || $user->role === 'admin_objek_wisata';
         });
+        Gate::define('access-kuliner', function ($user) {
+            return $user->role === 'SA' || $user->role === 'admin_kuliner';
+        });
     }
 }

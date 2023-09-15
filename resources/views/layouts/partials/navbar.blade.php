@@ -24,6 +24,7 @@
                                 <li><a href="{{ route('destinasi_wisata.index') }}">Objek Wisata</a></li>
                                 <li><a href="{{ route('souvenir.index') }}">Sovenir </a></li>
                                 <li><a href="{{ route('homestay.index') }}">Homestay</a></li>
+                                <li><a href="{{ route('kuliner.index') }}">Kuliner</a></li>
                                 @auth       
                                 <li>
                                     <a href="{{ route('dashboard') }}" target="__blank" class="book-btn" style="background:#00e0f0; color:white">dashboard <i class="fa fa-sign-in"></i>

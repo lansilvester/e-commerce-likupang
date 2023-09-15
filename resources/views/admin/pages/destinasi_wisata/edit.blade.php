@@ -49,10 +49,6 @@
                                 <textarea class="form-control" id="deskripsi" placeholder="Masukan deskripsi destinasi wisata" name="deskripsi">{{ $data_destinasi_wisata->deskripsi }}</textarea>
                             </div>
                             <div class="form-group mb-4">
-                                <label for="kontak" class="card-title">Kontak</label>
-                                <input type="text" class="form-control" name="kontak" maxlength="15" id="kontak" placeholder="08xxxxxxxxx" name="kontak" value="{{ $data_destinasi_wisata->kontak }}">
-                            </div>
-                            <div class="form-group mb-4">
                                 <label for="foto" class="card-title">Foto</label><br>
                                 <img src="{{ asset('storage/destinasi_wisata/' . $data_destinasi_wisata->foto) }}" alt="" width="250px" class="img-fluid mb-1">
                                 <input type="file" id="foto" name="foto" value="{{ $data_destinasi_wisata->foto }}" class="form-control">

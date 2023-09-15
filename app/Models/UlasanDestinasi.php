@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Souvenir extends Model
+class UlasanDestinasi extends Model
 {
-    use HasFactory;
     
-    protected $table = 'souvenir';
+    protected $table = 'destinasi_wisata';
     protected $guarded = ['id'];
+
+    use HasFactory;
+
     
-    public function user()
-{
-    return $this->belongsTo(User::class);
-}
 
 }

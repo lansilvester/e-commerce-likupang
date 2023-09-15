@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Destinasi_Wisata;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class DestinasiWisataAdminController extends Controller
@@ -37,9 +38,11 @@ class DestinasiWisataAdminController extends Controller
             'map',
             'harga_masuk',
             'deskripsi',
-            'kontak'
+            'kontak',
+            'user_id'
         ]);
-    
+        $data['user_id'] = Auth::user()->id;
+        
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
             $filename = time() . '.' . $file->getClientOriginalExtension();
@@ -73,7 +76,6 @@ class DestinasiWisataAdminController extends Controller
             'deskripsi' => 'required|max:1000',
             'foto' => 'image|max:5024',
             'kontak' => 'max:15'
-
         ]);
 
         $destinasiWisata = Destinasi_Wisata::findOrFail($id);
@@ -83,8 +85,10 @@ class DestinasiWisataAdminController extends Controller
             'map',
             'harga_masuk',
             'deskripsi',
-            'kontak'
+            'kontak',
+            'user_id'
         ]);
+        $data['user_id'] = Auth::user()->id;
 
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');

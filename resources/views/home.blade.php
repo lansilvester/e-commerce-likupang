@@ -77,7 +77,30 @@
                 </div><!--/.blog-details-->
             </div><!--/.container-->
         </section>
-		<!--HOMESTAY end-->
+
+        <section id="kuliner" class="blog">
+            <div class="container">
+                <div class="blog-details">
+					<div class="gallary-header text-center">
+						<h2>
+							<i class="fa fa-shopping-bag" style="color:#007ca1;font-size: 2em; margin-bottom: .5em;"></i><br>
+							Kuliner
+						</h2>
+						<p>
+							Dapatkan kuliner favorit anda
+						</p>
+						<hr class="line-blue" />
+					</div>
+					@include('layouts.partials.kuliner')
+                    <div class="about-btn">
+                        <a href="{{ route('kuliner.index') }}" class="about-view packages-btn" style="background:#00abab; border-color:#4c97ad; width:300px; margin:0 auto;">
+                            Lihat Semua &nbsp;<i class="fa fa-arrow-right"></i> 
+                        </a>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
 
 		
 		<!--subscribe start-->

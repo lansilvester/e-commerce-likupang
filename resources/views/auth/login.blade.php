@@ -9,6 +9,10 @@
         <div class="col-md-8">
             <a href="/" class="btn btn-outline-secondary mb-2"><i class="bi bi-house"></i> Kembali</a>
             <div class="card">
+@if(Session::has('register_success'))
+    <div class="alert alert-success">{!! session('register_success') !!}</div>
+@endif
+
                 
                 <div class="card-body">
                     <div class="login mb-5" style="font-size:5em; text-align:center"><i class="bi bi-person-add"></i></div>
@@ -61,7 +65,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-                                
+                                <p>Belum memiliki akun? <a href="{{ route('register') }}">Register Sekarang</a></p>
                             </div>
                         </div>
                     </form>

@@ -18,7 +18,7 @@
                                     <div class="row text-center">
                                         <ul>
 
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <div class="col-lg-3 col-md-3 col-sm-12">
                                             <div class="single-tab-select-box">
                                                 <li class="smooth-menu">
                                                     <a href="#destination">
@@ -29,7 +29,7 @@
                                           
                                             </div><!--/.single-tab-select-box-->
                                         </div><!--/.col-->
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <div class="col-lg-3 col-md-3 col-sm-12">
                                             <div class="single-tab-select-box">
                                                 <li class="smooth-menu">
                                                         <a href="#sovenir">
@@ -39,12 +39,22 @@
                                                 </li>
                                             </div><!--/.single-tab-select-box-->
                                         </div><!--/.col-->
-                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <div class="col-lg-3 col-md-3 col-sm-12">
                                             <div class="single-tab-select-box">
                                                 <li class="smooth-menu">
                                                     <a href="#homestay">
                                                     <i class="fa fa-building" style="color:#007ca1;font-size:5em; text-shadow:2px 2px 3px rgba(0,0,0,.15); margin-bottom:10px"></i>
                                                     <h2>Homestay</h2>
+                                                    </a>
+                                                </li>
+                                            </div><!--/.single-tab-select-box-->
+                                        </div><!--/.col-->
+                                        <div class="col-lg-3 col-md-3 col-sm-12">
+                                            <div class="single-tab-select-box">
+                                                <li class="smooth-menu">
+                                                    <a href="#kuliner">
+                                                    <i class="fa fa-shopping-bag" style="color:#007ca1;font-size:5em; text-shadow:2px 2px 3px rgba(0,0,0,.15); margin-bottom:10px"></i>
+                                                    <h2>Kuliner</h2>
                                                     </a>
                                                 </li>
                                             </div><!--/.single-tab-select-box-->
