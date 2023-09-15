@@ -51,16 +51,25 @@
                                     <td><h5 class="fw-bold">Deskripsi</h5>{{ $homestay->deskripsi }}</td>
                                 </tr>
                                 <tr>
+                                    <td><h5 class="fw-bold">Desa</h5>{{ $homestay->desa }}</td>
+                                </tr>
+                                <tr>
                                     <td><h5 class="fw-bold">Alamat</h5>{{ $homestay->alamat }}</td>
                                 </tr>
                                 <tr>
-                                    <td><h5 class="fw-bold">Harga</h5>{{ $homestay->harga }}</td>
+                                    <td><h5 class="fw-bold">Harga</h5>@currency($homestay->harga)</td>
                                 </tr>
                                 <tr>
                                     <td><h5 class="fw-bold">Kontak</h5>{{ $homestay->kontak }}</td>
                                 </tr>
                                 <tr>
-                                    <td><h5 class="fw-bold">Map</h5>{!! $homestay->map !!}</td>
+                                    <td>
+                                        <h5 class="fw-bold">Map</h5>
+                                        <a href="{{ $homestay->map }}" target="_blank">
+                                            {!! $homestay->map !!}
+                                        </a>
+                                        </td>
+                                    </a>
                                 </tr>
                             </td>
                         </tr>

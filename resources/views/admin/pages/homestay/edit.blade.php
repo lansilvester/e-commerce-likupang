@@ -56,6 +56,17 @@
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="form-group mb-4">
+                                <label for="desa" class="card-title">Desa</label>
+                                <select class="form-select @error('desa') is-invalid @enderror" id="desa" name="desa">
+                                    <option value="Desa Marinsow" {{ old('desa', $homestay->desa) == 'Desa Marinsow' ? 'selected' : '' }}>Desa Marinsow</option>
+                                    <option value="Desa Pulisan" {{ old('desa', $homestay->desa) == 'Desa Pulisan' ? 'selected' : '' }}>Desa Pulisan</option>
+                                    <option value="Desa Kinunang" {{ old('desa', $homestay->desa) == 'Desa Kinunang' ? 'selected' : '' }}>Desa Kinunang</option>
+                                </select>
+                                @error('desa')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>                            
                             <div class="form-group mb-5">
                                 <label for="foto" class="card-title">Foto</label><br>
                                 <small>Preview</small><br>

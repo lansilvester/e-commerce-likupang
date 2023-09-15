@@ -79,6 +79,7 @@ class SouvenirAdminController extends Controller
             'harga',
             'kontak',
             'deskripsi',
+            'foto'
         ]);
 
         if ($request->hasFile('foto')) {

@@ -18,6 +18,7 @@ use App\Http\Controllers\SouvenirAdminController;
 use App\Http\Controllers\SouvenirController;
 use App\Http\Controllers\UlasanController;
 use App\Http\Controllers\UserController;
+use App\Models\Homestay;
 
 Auth::routes();
 
@@ -27,6 +28,21 @@ Route::resource('souvenir', SouvenirController::class);
 Route::resource('destinasi_wisata', DestinasiWisataController::class);
 Route::resource('kuliner', KulinerController::class);
 Route::resource('ulasan', UlasanController::class);
+
+Route::get('desa_marinsow', function(){
+    $desa_marinsow = Homestay::where('desa','Desa marinsow')->get();
+    return view('layouts/partials/homestay_marinsow', compact('desa_marinsow'));
+})->name('desa_marinsow');
+
+Route::get('desa_pulisan', function(){
+    $desa_pulisan = Homestay::where('desa','Desa pulisan')->get();
+    return view('layouts/partials/homestay_pulisan', compact('desa_pulisan'));
+})->name('desa_pulisan');
+
+Route::get('desa_kinunang', function(){
+    $desa_kinunang = Homestay::where('desa','Desa Kinunang')->get();
+    return view('layouts/partials/homestay_kinunang', compact('desa_kinunang'));
+})->name('desa_kinunang');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');

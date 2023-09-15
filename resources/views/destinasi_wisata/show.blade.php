@@ -55,7 +55,7 @@
                                     <td><h5 class="fw-bold">Alamat</h5>{{ $destinasi->alamat }}</td>
                                 </tr>
                                 <tr>
-                                    <td><h5 class="fw-bold">Harga Masuk</h5>Rp. {{ $destinasi->harga_masuk }}</td>
+                                    <td><h5 class="fw-bold">Harga Masuk</h5>@currency($destinasi->harga_masuk)</td>
                                 </tr>
                                 
                                 <tr>
