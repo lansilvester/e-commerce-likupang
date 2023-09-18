@@ -2,6 +2,8 @@
 
 @section('content')
 <br><br>
+<br><br>
+<br><br>
 <div class="container">
     <div class="blog-details">
         <div class="gallary-header text-center">

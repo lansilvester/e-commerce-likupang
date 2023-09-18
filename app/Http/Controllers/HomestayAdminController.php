@@ -30,12 +30,9 @@ class HomestayAdminController extends Controller
             'deskripsi' => 'string',
             'foto' => 'image|max:5024',
             'map' => 'string',
-<<<<<<< HEAD
-            'user_id' => 'required'
-=======
+            'user_id' => 'required',
             'desa' => 'required|in:Desa Marinsow,Desa Pulisan,Desa Kinunang',
 
->>>>>>> 03df6215a40ec7acc9c2543d58106f6e30e4e864
         ]);
 
         $data = $request->only([
@@ -46,11 +43,8 @@ class HomestayAdminController extends Controller
             'deskripsi',
             'foto',
             'map',
-<<<<<<< HEAD
-            'user_id'
-=======
+            'user_id',
             'desa'
->>>>>>> 03df6215a40ec7acc9c2543d58106f6e30e4e864
         ]);
         $data['user_id'] = Auth::user()->id;
         if ($request->hasFile('foto')) {

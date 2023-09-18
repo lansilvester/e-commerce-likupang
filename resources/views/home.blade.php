@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+        @include('layouts.partials.banner')
+
 		<!-- 3 BOXES -->
         @include('layouts.partials.boxes')
 		<!--3 BOXES end-->
@@ -13,6 +15,8 @@
 			<div class="container">
 				<div class="gallery-details">
 					<div class="gallary-header text-center">
+						<br>
+						<br>
 						<h2>
 							<i class="fa fa-plane" style="color: #007ca1; font-size: 3em; margin-bottom: .1em;"></i><br>
 							Objek Wisata
@@ -23,10 +27,7 @@
 						<hr class="line-blue" />
 					</div>
 @include('layouts.partials.destinasi_wisata')
-					<div class="about-btn">
-						<a href="{{ route('destinasi_wisata.index') }}" class="about-view packages-btn" style="background:#00abab; border-color:#4c97ad; width:300px; margin:0 auto;">
-							Lihat Semua &nbsp;<i class="fa fa-arrow-right"></i> 
-						</a>
+
 					</div><!--/.about-btn-->
 
 				</div><!--/.gallery-details-->

@@ -1,49 +1,40 @@
-<header class="top-area">
-    <div class="header-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="logo">
-                        <a href="/">
-                            Liku<span>pang</span>
-                        </a>
-                    </div><!-- /.logo-->
-                </div><!-- /.col-->
-                <div class="col-sm-10">
-                    <div class="main-menu">
-                    
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <i class="fa fa-bars"></i>
-                            </button><!-- / button-->
-                        </div><!-- /.navbar-header-->
-                        <div class="collapse navbar-collapse">		  
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="{{ route('home') }}">home</a></li>
-                                <li><a href="{{ route('destinasi_wisata.index') }}">Objek Wisata</a></li>
-                                <li><a href="{{ route('souvenir.index') }}">Sovenir </a></li>
-                                <li><a href="{{ route('homestay.index') }}">Homestay</a></li>
-                                <li><a href="{{ route('kuliner.index') }}">Kuliner</a></li>
-                                @auth       
-                                <li>
-                                    <a href="{{ route('dashboard') }}" target="__blank" class="book-btn" style="background:#00e0f0; color:white">dashboard <i class="fa fa-sign-in"></i>
-                                    </a>
-                                </li><!--/.project-btn--> 
-                                @endauth
-                                @guest
-                                <li>
-                                    <a href="{{ route('login') }}" target="__blank" class="book-btn" style="background:#00e0f0; color:white">Sign in <i class="fa fa-sign-in"></i>
-                                    </a>
-                                </li><!--/.project-btn--> 
-                                @endguest
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.main-menu-->
-                </div><!-- /.col-->
-            </div><!-- /.row -->
-            <div class="home-border"></div><!-- /.home-border-->
-        </div><!-- /.container-->
-    </div><!-- /.header-area -->
-
-</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <style>
+    </style>
+    <div class="container py-2">
+      <a class="navbar-brand" href="/">Liku<span style="color:#2fa8ff;font-weight:bold">pang</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link  {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  {{ request()->routeIs('destinasi_wisata*') ? 'active' : '' }}" href="{{ route('destinasi_wisata.index') }}">Objek Wisata</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  {{ request()->routeIs('souvenir*') ? 'active' : '' }}" href="{{ route('souvenir.index') }}">Souvenir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  {{ request()->routeIs('homestay*') ? 'active' : '' }}" href="{{ route('homestay.index') }}">Homestay</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  {{ request()->routeIs('kuliner*') ? 'active' : '' }}" href="{{ route('kuliner.index') }}">Kuliner</a>
+          </li>
+          @auth
+          <li class="nav-item">
+            <a href="{{ route('dashboard') }}" target="__blank" class="btn btn-primary"><i class="fa fa-user-circle"></i> {{ Auth::user()->name }}</a>
+          </li>
+          @endauth
+          @guest
+          <li class="nav-item">
+            <a href="{{ route('login') }}" target="__blank" class="btn btn-primary">Sign In</a>
+          </li>
+          @endguest
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

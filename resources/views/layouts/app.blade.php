@@ -12,7 +12,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		<!-- TITLE OF SITE -->
 		<title>Likupang</title>
 
@@ -38,9 +38,6 @@
 		<!-- range css-->
         <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}" />
 
-		<!--bootstrap.min.css-->
-		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
-
 		<!-- bootsnav -->
 		<link rel="stylesheet" href="{{ asset('assets/css/bootsnav.css') }}"/>
 
@@ -65,13 +62,15 @@
             a:hover{
                 text-decoration: none;	
             }
+			a{
+				text-decoration: none;
+			}
         </style>
 	</head>
 
 	<body>
 		<!-- main-menu Start -->
         @include('layouts.partials.navbar')
-        @include('layouts.partials.banner')
 		<!-- main-menu End -->
         @yield('content')
 		<!-- footer-copyright start -->
@@ -114,6 +113,7 @@
 
 		<!--Custom JS-->
 		<script src="{{ asset('assets/js/custom.js') }}"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 
 	</body>

@@ -1,6 +1,5 @@
-<!--/.gallery-header-->
 <div class="gallery-box">
-    <div class="gallery-content">
+    <div class="gallery-content py-3">
         <div class="filtr-container">
             <div class="row">
                 @forelse ($data_destinasi_wisata as $destinasi)
@@ -20,6 +19,10 @@
                     <div class="alert alert-info">Data Tidak Ada</div>
                 @endforelse
             </div><!-- /.row -->
+            <div class="about-btn">
+                <a href="{{ route('destinasi_wisata.index') }}" class="about-view packages-btn" style="background:#00abab; border-color:#4c97ad; width:300px; margin:0 auto;">
+                    Lihat Semua &nbsp;<i class="fa fa-arrow-right"></i> 
+                </a>
         </div><!-- /.filtr-container-->
     </div><!-- /.gallery-content -->
 </div><!--/.galley-box-->
