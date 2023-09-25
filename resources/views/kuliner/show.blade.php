@@ -67,7 +67,7 @@
                             <td><h5 class="fw-bold">Alamat</h5>{{ $kuliner->Alamat }}</td>
                         </tr>
                         <tr>
-                            <td><h5 class="fw-bold">Harga</h5>{{ $kuliner->Harga }}</td>
+                            <td><h5 class="fw-bold">Harga</h5>Rp.{{ $kuliner->Harga }}</td>
                         </tr>
                         <tr>
                             <td><h5 class="fw-bold">Diposting oleh</h5>{{ $kuliner->user->name }}</td>
@@ -111,6 +111,7 @@
                 <br>
                 @endif
                 <h3 class="mb-3">Ulasan Pengguna</h3>
+                <h6 class="mb-3"> ({{ $ulasan->count() }} Komentar)</h6>
                 <ul id="userReviews" class="list-unstyled">
                     @if ($ulasan->isEmpty())
                         <div class="alert alert-info" style="margin: 15px 0;">Belum ada ulasan</div>
@@ -126,9 +127,8 @@
                                         @for ($i = $review->rating + 1; $i <= 5; $i++)
                                             <i class="bi bi-star" style="color: #FFD700;"></i>
                                         @endfor
-                                        <p>{{ $review->ulasan }}</p>
-                                    </div>
-                                    <div>
+                                        <p class="mb-3">{{ $review->ulasan }}</p>
+                                   
                                         <small>Oleh: {{ $review->user->name }}</small><br>
                                         <small>{{ $review->created_at->format('d M Y, H:i') }}</small>
                                     </div>

@@ -19,7 +19,7 @@
         <div class="col-md-4 col-sm-6">
             <div class="single-package-item">
                 <div class="thumbnail-img">
-                    <img src="https://th.bing.com/th/id/OIP.4vxs-q8KKon-rqRrUKwe3wHaDf?pid=ImgDet&rs=1" alt="blog-img">
+                    <img src="https://akcdn.detik.net.id/community/media/visual/2020/09/03/pantai-likupang-1_169.jpeg?w=620" alt="blog-img">
                     <div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
                 </div><!--/.thumbnail-img-->
                 <div class="single-package-item-txt" style="margin-top:20px;">

@@ -30,7 +30,6 @@ class HomestayAdminController extends Controller
             'deskripsi' => 'string',
             'foto' => 'image|max:5024',
             'map' => 'string',
-            'user_id' => 'required',
             'desa' => 'required|in:Desa Marinsow,Desa Pulisan,Desa Kinunang',
 
         ]);

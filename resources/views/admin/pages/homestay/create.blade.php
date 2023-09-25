@@ -45,7 +45,7 @@
                             </div>
                             <div class="form-group mb-4">
                                 <label for="kontak" class="card-title">Kontak</label>
-                                <input type="number" class="form-control @error('kontak') is-invalid @enderror" id="kontak" placeholder="Ketik nomor kontak.." name="kontak">
+                                <input type="number" maxlength="15" class="form-control @error('kontak') is-invalid @enderror" id="kontak" placeholder="Ketik nomor kontak.." name="kontak">
                                 @error('kontak')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror

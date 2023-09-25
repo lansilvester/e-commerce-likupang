@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="top">
     <style>
     </style>
     <div class="container py-2">
@@ -8,23 +10,23 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link  {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
+          <li class="nav-item mx-1">
+            <a class="nav-link  {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}"><i class="bi bi-house"></i> Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a class="nav-link  {{ request()->routeIs('destinasi_wisata*') ? 'active' : '' }}" href="{{ route('destinasi_wisata.index') }}">Objek Wisata</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a class="nav-link  {{ request()->routeIs('souvenir*') ? 'active' : '' }}" href="{{ route('souvenir.index') }}">Souvenir</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a class="nav-link  {{ request()->routeIs('homestay*') ? 'active' : '' }}" href="{{ route('homestay.index') }}">Homestay</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a class="nav-link  {{ request()->routeIs('kuliner*') ? 'active' : '' }}" href="{{ route('kuliner.index') }}">Kuliner</a>
           </li>
           @auth
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a href="{{ route('dashboard') }}" target="__blank" class="btn btn-primary"><i class="fa fa-user-circle"></i> {{ Auth::user()->name }}</a>
           </li>
           @endauth

@@ -6,13 +6,12 @@
         list-style: none;
     }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 <div class="blog-content">
     <div class="row">
         @forelse ($data_kuliner as $kuliner)
             
-        <div class="col-md-4 col-sm-6">
+        <div class="col-xl-4 col-md-4 col-sm-6 col-xs-6">
             <div class="single-package-item">
                 <div class="thumbnail-img">
                     <img src="{{ asset('storage/' . $kuliner->foto) }}" alt="Gambar kuliner" width="100%">

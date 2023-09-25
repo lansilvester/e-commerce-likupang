@@ -32,7 +32,7 @@
                     </div><!--/.thumbnail-img-->
                     <br>
                 @auth
-                    @if (Auth::user()->role = 'SA' || Auth::user()->role = 'admin_homestay')
+                    @if (Auth::user()->role = 'SA' || Auth::user()->role = 'admin_homestay' && Auth::user()->id == $homestay->user->id)
                     <a class="btn btn-warning" href="{{ route('dashboard_homestay.edit', $homestay->id) }}" target="__blank"><i class="fa fa-pencil"></i> Edit</a>
                     @endif
                 @endauth
@@ -60,7 +60,10 @@
                                     <td><h5 class="fw-bold">Harga</h5>@currency($homestay->harga)</td>
                                 </tr>
                                 <tr>
-                                    <td><h5 class="fw-bold">Kontak</h5>{{ $homestay->kontak }}</td>
+                                    <td>
+                                        <h5 class="fw-bold">Kontak</h5>{{ $homestay->kontak }}<br>
+                                        <a href="https://api.whatsapp.com/send?phone={{ $homestay->kontak }}&text="></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
