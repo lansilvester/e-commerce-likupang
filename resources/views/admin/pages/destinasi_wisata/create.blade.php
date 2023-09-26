@@ -37,23 +37,22 @@
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <label for="harga_masuk" class="card-title">Harga Masuk</label><br>
+                            <label for="harga_masuk_roda_dua" class="card-title">Harga Masuk Roda Dua</label><br>
                             <div class="input-group mb-4">
                                 <span class="input-group-text">Rp.</span>
-                                <input type="number" name="harga_masuk" class="form-control @error('harga_masuk') is-invalid @enderror" id="harga_masuk" placeholder="Masukkan Harga" aria-label="Amount (to the nearest dollar)">
+                                <input type="number" name="harga_masuk_roda_dua" class="form-control @error('harga_masuk_roda_dua') is-invalid @enderror" id="harga_masuk_roda_dua" placeholder="Masukkan Harga" aria-label="Amount (to the nearest dollar)">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                            <label for="harga_masuk_roda_empat" class="card-title">Harga Masuk Roda Empat</label><br>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text">Rp.</span>
+                                <input type="number" name="harga_masuk_roda_empat" class="form-control @error('harga_masuk_roda_empat') is-invalid @enderror" id="harga_masuk_roda_empat" placeholder="Masukkan Harga" aria-label="Amount (to the nearest dollar)">
                                 <span class="input-group-text">.00</span>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="deskripsi" class="card-title">Deskripsi</label>
                                 <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" placeholder="Masukkan deskripsi destinasi wisata" name="deskripsi"></textarea>
                                 @error('deskripsi')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group mb-4">
-                                <label for="kontak" class="card-title">Kontak</label>
-                                <input type="text" class="form-control @error('kontak') is-invalid @enderror" id="kontak" placeholder="Masukkan kontak destinasi wisata" name="kontak">
-                                @error('kontak')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>

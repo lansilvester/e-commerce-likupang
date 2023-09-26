@@ -1,3 +1,9 @@
+<style>
+  .carousel-inner img {
+    max-height: 50vh;
+    width: auto;
+}
+</style>
 <section id="home" class="">
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">

@@ -38,10 +38,16 @@
 
                                 <input class="form-control" id="map" placeholder="Masukkan kode iframe Google Maps" name="map" value="{{ $data_destinasi_wisata->map }}">
                             </div>
-                            <label for="harga_masuk" class="card-title">Harga Masuk</label><br>
+                            <label for="harga_masuk_roda_dua" class="card-title">Harga Masuk Roda Dua</label><br>
                             <div class="input-group mb-4">
                                 <span class="input-group-text">Rp.</span>
-                                <input required type="number" name="harga_masuk" class="form-control" id="harga_masuk" placeholder="Masukan Harga" aria-label="Amount (to the nearest dollar)" value="{{ $data_destinasi_wisata->harga_masuk }}">
+                                <input required type="number" name="harga_masuk_roda_dua" class="form-control" id="harga_masuk_roda_dua" placeholder="Masukan Harga" aria-label="Amount (to the nearest dollar)" value="{{ $data_destinasi_wisata->harga_masuk_roda_dua }}">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                            <label for="harga_masuk_roda_empat" class="card-title">Harga Masuk Roda Empat</label><br>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text">Rp.</span>
+                                <input required type="number" name="harga_masuk_roda_empat" class="form-control" id="harga_masuk_roda_empat" placeholder="Masukan Harga" aria-label="Amount (to the nearest dollar)" value="{{ $data_destinasi_wisata->harga_masuk_roda_empat }}">
                                 <span class="input-group-text">.00</span>
                             </div>
                             <div class="form-group mb-4">

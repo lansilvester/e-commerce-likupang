@@ -61,7 +61,15 @@
                                     <td><h5 class="fw-bold">Alamat</h5>{{ $destinasi->alamat }}</td>
                                 </tr>
                                 <tr>
-                                    <td><h5 class="fw-bold">Harga Masuk</h5>@currency($destinasi->harga_masuk)</td>
+                                    <td><h5 class="fw-bold">Harga Masuk</h5>
+
+                                        <p>
+                                            Roda Dua : @currency($destinasi->harga_masuk_roda_dua)
+                                        </p>
+                                        <p>
+                                            Roda Empat : @currency($destinasi->harga_masuk_roda_empat)
+                                        </p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><h5 class="fw-bold">Map</h5>

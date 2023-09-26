@@ -19,10 +19,10 @@
 						<br>
 						<h2>
 							<i class="fa fa-plane" style="color: #007ca1; font-size: 3em; margin-bottom: .1em;"></i><br>
-							Objek Wisata
+							Destinasi  Wisata
 						</h2>
 						<p>
-							Mulai liburan anda dengan melihat objek wisata di likupang
+							Mulai liburan anda dengan melihat destinasi wisata di likupang
 						</p>
 						<hr class="line-blue" />
 					</div>
@@ -69,6 +69,11 @@
 						<hr class="line-blue" />
 					</div><!--/.gallery-header-->
 					@include('layouts.partials.homestay')
+					<div class="about-btn">
+                        <a href="{{ route('homestay.index') }}" class="about-view packages-btn" style="background:#00abab; border-color:#4c97ad; width:300px; margin:0 auto;">
+                            Lihat Semua &nbsp;<i class="fa fa-arrow-right"></i> 
+                        </a>
+                    </div>
                 </div><!--/.blog-details-->
             </div><!--/.container-->
         </section>

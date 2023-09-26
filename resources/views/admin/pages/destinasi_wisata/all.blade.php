@@ -76,16 +76,7 @@
                                 </tr>
                                 @endforelse
                             </tbody>
-                        </table>       
-                        <style>
-                            svg{
-                                width:20px;
-                            }
-                            .text-sm{
-                                margin-top:25px;
-                            }
-                        </style>
-                        {{ $data_destinasi_wisata->links() }}                 
+                        </table>          
                     </div>
                 </div>
             </div>

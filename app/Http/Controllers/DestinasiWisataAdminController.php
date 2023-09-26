@@ -11,7 +11,7 @@ class DestinasiWisataAdminController extends Controller
 {
     public function index()
     {
-        $data_destinasi_wisata = Destinasi_Wisata::paginate(7);
+        $data_destinasi_wisata = Destinasi_Wisata::all();
         return view('admin.pages.destinasi_wisata.all', compact('data_destinasi_wisata'));
         
     }
@@ -26,19 +26,19 @@ class DestinasiWisataAdminController extends Controller
             'nama_destinasi' => 'string|max:100',
             'alamat' => 'string|max:255',
             'map' => 'string',
-            'harga_masuk' => 'string',
+            'harga_masuk_roda_dua' => 'string',
+            'harga_masuk_roda_empat' => 'string',
             'deskripsi' => 'string',
             'foto' => 'image|max:5024',
-            'kontak' => 'string|max:15'
         ]);
     
         $data = $request->only([
             'nama_destinasi',
             'alamat',
             'map',
-            'harga_masuk',
+            'harga_masuk_roda_dua',
+            'harga_masuk_roda_empat',
             'deskripsi',
-            'kontak',
             'user_id'
         ]);
         $data['user_id'] = Auth::user()->id;
@@ -72,10 +72,10 @@ class DestinasiWisataAdminController extends Controller
             'nama_destinasi' => 'required|max:255',
             'alamat' => 'required|max:255',
             'map' => 'max:1000',
-            'harga_masuk' => 'required|max:255',
+            'harga_masuk_roda_dua' => 'required|max:255',
+            'harga_masuk_roda_empat' => 'required|max:255',
             'deskripsi' => 'required|max:1000',
-            'foto' => 'image|max:5024',
-            'kontak' => 'max:15'
+            'foto' => 'image|max:5024'
         ]);
 
         $destinasiWisata = Destinasi_Wisata::findOrFail($id);
@@ -83,7 +83,8 @@ class DestinasiWisataAdminController extends Controller
             'nama_destinasi',
             'alamat',
             'map',
-            'harga_masuk',
+            'harga_masuk_roda_dua',
+            'harga_masuk_roda_empat',
             'deskripsi',
             'kontak',
             'user_id'

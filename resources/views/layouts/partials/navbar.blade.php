@@ -14,7 +14,7 @@
             <a class="nav-link  {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}"><i class="bi bi-house"></i> Home</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link  {{ request()->routeIs('destinasi_wisata*') ? 'active' : '' }}" href="{{ route('destinasi_wisata.index') }}">Objek Wisata</a>
+            <a class="nav-link  {{ request()->routeIs('destinasi_wisata*') ? 'active' : '' }}" href="{{ route('destinasi_wisata.index') }}">Destinasi  Wisata</a>
           </li>
           <li class="nav-item mx-1">
             <a class="nav-link  {{ request()->routeIs('souvenir*') ? 'active' : '' }}" href="{{ route('souvenir.index') }}">Souvenir</a>
